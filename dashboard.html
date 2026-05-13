@@ -93,7 +93,7 @@ footer a:hover{opacity:1;}
     </div>
   </div>
 
-  <div class="info-meta" id="infoMeta">
+  <div class="info-meta" id="infoMeta" style="display:none">
     <span>Meta diária (seg-sex): <strong id="iMetaDia">—</strong></span>
     <span>Meta sábado (até 13h): <strong id="iMetaSab">—</strong></span>
     <span>Dias equivalentes no mês: <strong id="iDiasEq">—</strong></span>
@@ -135,7 +135,7 @@ footer a:hover{opacity:1;}
           <th>Data</th>
           <th>Dia</th>
           <th>Meta do dia</th>
-          <th>Realizado</th>
+          <th>% Realizado</th>
           <th>Acumulado</th>
           <th>Status</th>
         </tr>
@@ -333,7 +333,7 @@ function render(lancamentos){
       '<td>'+p[2]+'/'+p[1]+'/'+p[0]+'</td>'+
       '<td style="color:#888">'+dow+(isSab?' ☆':'')+'</td>'+
       '<td style="color:#888">'+pct+'%</td>'+
-      '<td style="color:'+(bateu?'#1D9E75':'#E24B4A')+'">'+fmtBRL(val)+'</td>'+
+      '<td style="color:'+(bateu?'#1D9E75':'#E24B4A')+'">'+pct+'%</td>'+
       '<td style="font-weight:600">'+ap+'%</td>'+
       '<td><span class="badge '+sc2+'">'+sl2+' da meta</span></td>'+
       '</tr>';
